@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+    <script src="NewStartMaddy.js"></script> <!-- Moved script to head for clarity -->
+</head>
+<body>
+    <!-- Splash container that will be shown initially -->
+    <div id="splash-container">
+        <h1>Welcome To Our Group Assignment!</h1>
+        <button id="SeeMore-button">See More?</button> <!-- Button to proceed to main content -->
+    </div>
+    <!-- Main content, hidden initially -->
+    <div id="controls" style="display:none;">
+
+    
+    <!-- Sketch container for the p5.js canvas, hidden initially -->
+    <div id="sketch-container" style="display:none;"></div>
+      <div id="image-container"></div>
+      <button id="changeImageButton"> Change Image </button>
+      <select id="imageSelection"></select>
+    <script>
+        // JavaScript to handle the splash page functionality
+        document.getElementById('SeeMore-button').addEventListener('click', function() {
+            // Hide the splash container and show the main content
+            document.getElementById('splash-container').style.display = 'none';
+            document.getElementById('controls').style.display = 'block';
+            document.getElementById('sketch-container').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
